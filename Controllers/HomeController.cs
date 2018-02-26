@@ -11,6 +11,7 @@ namespace vega.Controllers
     {
         public IActionResult Index()
         {
+            var test = "";
             return View();
         }
 
