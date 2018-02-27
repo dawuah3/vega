@@ -13,7 +13,9 @@ export class VehicleFormComponent implements OnInit {
   features: any[];
   vehicle: any = {};
 
-  constructor(private makeService: MakeService, private featureService: FeatureService) { }
+  constructor(
+    private makeService: MakeService, 
+    private featureService: FeatureService) { }
 
   ngOnInit() {
     this.makeService.getMakes().subscribe(makes => {
