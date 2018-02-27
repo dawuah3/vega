@@ -3,13 +3,18 @@ import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class MakeService {
+export class VehicleService {
 
   constructor(private http: Http) { }
 
   getMakes() {
-    return this.http.get('/api/makes')
+    return this.http.get('/api/vehicles/makes')
       .map(res => res.json());
+  }
+
+  getFeatures() {
+    return this.http.get('/api/vehicles/features')
+      .map(response => response.json());
   }
 
 }

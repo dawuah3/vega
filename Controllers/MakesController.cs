@@ -20,7 +20,7 @@ namespace vega.Controllers
             _context = context;
         }
 
-        [HttpGet("/api/makes")]
+        [HttpGet("/api/vehicles/makes")]
         public async Task<IEnumerable<MakeResource>> GetMakes()
         {
             var makes = await _context
