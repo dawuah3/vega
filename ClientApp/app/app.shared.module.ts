@@ -1,6 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+
+import { MakeService } from './services/make.service';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
@@ -32,6 +34,9 @@ import { VehicleFormComponent } from './components/vehicle-form/vehicle-form.com
             { path: 'fetch-data', component: FetchDataComponent },
             { path: '**', redirectTo: 'home' }
         ])
+    ],
+    providers: [
+        MakeService
     ]
 })
 export class AppModuleShared {
